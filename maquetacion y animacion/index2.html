@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación con Spritesheet</title>
+    <style>
+        /* Fondo de la página simulando una pared */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(https://www.toptal.com/designers/subtlepatterns/uploads/dark_wood.png);
+            background-size: cover;
+        }
+
+        /* Marco de fotos */
+        .photo_frame {
+            position: relative;
+            width: 320px;
+            height: 420px;
+            padding: 10px;
+            background: #fcfbf9; /* Color marrón para el marco */
+            border: 20px solid #ed4511;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animación dentro del marco */
+        .intro_animation {
+          width: 300px;
+          height: 400px;
+          background: url(img.png);
+          background-repeat: no-repeat;
+          animation: objects 5s steps(29) infinite;
+          animation-delay: 2s;
+    }
+
+
+        @keyframes objects {
+            from {
+                background-position: 0px;
+            }
+            to {
+                background-position: -8700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="photo_frame">
+        <div class="intro_animation"></div>
+    </div>
+</body>
+</html>
